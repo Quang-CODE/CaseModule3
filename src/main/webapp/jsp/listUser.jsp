@@ -22,6 +22,9 @@
 
         <form action="/createUser">
          <table class="table table-striped">
+             <tr>
+                 <td><a href="/admin">Click here to go back to admin page</a></td>
+             </tr>
         <tr>
              <td><a href="/jsp/createUser.jsp">Create user</a></td>
         </tr>

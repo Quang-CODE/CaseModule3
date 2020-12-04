@@ -28,7 +28,7 @@
 <%@include file="/jsp/header.jsp" %>
 <div class="container" style="background-color: lavenderblush">
     <div id="form" style="height: 800px;align-content: center">
-    <h1 style="text-align: center;">Create new product</h1>
+    <h1 style="text-align: center;">Create new user</h1>
     <p>
     <c:if test='${requestScope["message"] != null}'>
         <span class="message">${requestScope["message"]}</span>
@@ -38,12 +38,12 @@
         <a href="/users">back to user list</a>
     </p>
     <form action="/createUser" method="post">
-        <legend>product info</legend>
+        <legend>User info</legend>
         <table>
-            <tr>
-                <td>Id: </td>
-                <td><input type="text" name="id" id="id"></td>
-            </tr>
+<%--            <tr>--%>
+<%--                <td>Id: </td>--%>
+<%--                <td><input type="text" name="id" id="id"></td>--%>
+<%--            </tr>--%>
             <tr>
                 <td>First name: </td>
                 <td><input type="text" name="firstName" id="firstName"></td>
@@ -70,7 +70,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" value="Create product"></td>
+                <td><input type="submit" value="Create user"></td>
             </tr>
         </table>
     </form>

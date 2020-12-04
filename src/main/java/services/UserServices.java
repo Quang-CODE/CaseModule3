@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.Map;
 
 public class UserServices {
-    private static final String INSERT_USERS_SQL = "INSERT INTO users" + "(id,firstName,lastName,address,email,shipAddress,role) VALUES " +
-            " (?, ?, ?, ?, ?, ?, ?);";
+    private static final String INSERT_USERS_SQL = "INSERT INTO users" + "(firstName,lastName,address,email,shipAddress,role) VALUES " +
+            " (?, ?, ?, ?, ?, ?);";
 
     private static final String SELECT_USER_BY_ID = "select * from users where id = ?";
     private static final String SELECT_ALL_USERS = "select * from users";
@@ -52,13 +52,12 @@ public class UserServices {
         try{
             Connection connection = ConnectMySQLDb.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
-            preparedStatement.setInt(1,user.getId());
-            preparedStatement.setString(2,user.getFirstName());
-            preparedStatement.setString(3,user.getLastName());
-            preparedStatement.setString(4,user.getAddress());
-            preparedStatement.setString(5,user.getEmail());
-            preparedStatement.setString(6,user.getShipAddress());
-            preparedStatement.setInt(7,user.getRole());
+            preparedStatement.setString(1,user.getFirstName());
+            preparedStatement.setString(2,user.getLastName());
+            preparedStatement.setString(3,user.getAddress());
+            preparedStatement.setString(4,user.getEmail());
+            preparedStatement.setString(5,user.getShipAddress());
+            preparedStatement.setInt(6,user.getRole());
             preparedStatement.executeUpdate();
             }catch (Exception e){
             e.printStackTrace();

@@ -32,17 +32,17 @@
         <label for="id">Id:</label><br>
         <input type="number" id="id" name="id" value="${requestScope["user"].getId()}" hidden><br>
         <label for="firstName">First Name:</label><br>
-        <input type="text" id="firstName" name="firstName" value="${requestScope["user"].getFirstName()} "disabled><br>
+        <input type="text" id="firstName" name="firstName" value="${requestScope["user"].getFirstName()}"><br>
         <label for="lastName">Last Name:</label><br>
-        <input type="text" id="lastName" name="lastName" value="${requestScope["user"].getLastName()} "disabled><br><br>
+        <input type="text" id="lastName" name="lastName" value="${requestScope["user"].getLastName()}"><br><br>
         <label for="address">Address:</label><br>
-        <input type="text" id="address" name="address" value="${requestScope["user"].getAddress()}" disabled><br><br>
+        <input type="text" id="address" name="address" value="${requestScope["user"].getAddress()}"><br><br>
         <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email" value="${requestScope["user"].getEmail()}" disabled><br><br>
+        <input type="text" id="email" name="email" value="${requestScope["user"].getEmail()}"><br><br>
         <label for="shipAddress">Ship Address:</label><br>
-        <input type="text" id="shipAddress" name="shipAddress" value="${requestScope["user"].getShipAddress()}" disabled><br><br>
+        <input type="text" id="shipAddress" name="shipAddress" value="${requestScope["user"].getShipAddress()}"><br><br>
         <label for="role">Role:</label><br>
-        <input type="number" id="role" name="role" value="${requestScope["user"].getRole()}" disabled><br>
+        <input type="number" id="role" name="role" value="${requestScope["user"].getRole()}"><br>
         <input type="submit" value="delete user">
 
     </form>

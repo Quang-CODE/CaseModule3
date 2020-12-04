@@ -22,19 +22,22 @@
     <form action="/createOrder">
     <table class="table table-striped">
         <tr>
+            <td><a href="/admin">Click here to go back to admin page</a></td>
+        </tr>
+        <tr>
             <td><a href="/jsp/createOrder.jsp">Create order</a></td>
         </tr>
         <tr>
             <th>Id</th>
-            <th>Customer Id</th>
-            <th>Order number</th>
+            <th>User Id</th>
+            <th>Total</th>
             <th>ACTIONS!!!</th>
         </tr>
         <c:forEach items="${orders}" var="order" >
             <tr>
                 <td>${order.getId()}</td>
-                <td>${order.getCustomerId()}</td>
-                <td>${order.getOrderNumber()}</td>
+                <td>${order.getUserId()}</td>
+                <td>${order.getTotal()}</td>
                 <td>
                     <a href="/deleteOrder?id=${order.getId()}">Delete</a>
                     <a href="/editOrder?id=${order.getId()}">Edit</a>

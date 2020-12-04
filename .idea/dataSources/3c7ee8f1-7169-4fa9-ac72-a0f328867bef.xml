@@ -962,6 +962,7 @@ SELECT|sys.sys_config:null
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="302" parent="293" name="OrderId">
       <Position>2</Position>
@@ -1014,17 +1015,18 @@ SELECT|sys.sys_config:null
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="314" parent="294" name="CustomerId">
+    <column id="314" parent="294" name="userId">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="315" parent="294" name="OrderNumber">
+    <column id="315" parent="294" name="total">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="316" parent="294" name="CustomerId">
-      <ColNames>CustomerId</ColNames>
+    <index id="316" parent="294" name="userId">
+      <ColNames>userId</ColNames>
       <Type>btree</Type>
     </index>
     <key id="317" parent="294" name="PRIMARY">
@@ -1032,8 +1034,8 @@ SELECT|sys.sys_config:null
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="318" parent="294" name="orders_ibfk_1">
-      <ColNames>CustomerId</ColNames>
+    <foreign-key id="318" parent="294" name="orders_ibfk_2">
+      <ColNames>userId</ColNames>
       <RefTableName>users</RefTableName>
       <RefColNames>Id</RefColNames>
     </foreign-key>
@@ -1041,6 +1043,7 @@ SELECT|sys.sys_config:null
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="320" parent="295" name="ProductName">
       <Position>2</Position>
@@ -1088,6 +1091,7 @@ SELECT|sys.sys_config:null
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="330" parent="296" name="FirstName">
       <Position>2</Position>
@@ -1102,12 +1106,10 @@ SELECT|sys.sys_config:null
     <column id="332" parent="296" name="Address">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="333" parent="296" name="Email">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="334" parent="296" name="ShipAddress">
       <Position>6</Position>

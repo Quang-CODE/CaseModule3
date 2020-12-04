@@ -4,14 +4,18 @@ import java.util.Date;
 
 public class Order {
     private int id;
-    private int CustomerId;
-    private int OrderNumber;
+    private int userId;
+    private int total;
 
-    public Order(int id, int customerId, int orderNumber) {
+    public Order(int id, int userId, int total) {
         this.id = id;
-        CustomerId = customerId;
-        OrderNumber = orderNumber;
+        this.userId = userId;
+        this.total = total;
+    }
 
+    public Order(int userId, int total) {
+        this.userId = userId;
+        this.total = total;
     }
 
     public int getId() {
@@ -22,20 +26,19 @@ public class Order {
         this.id = id;
     }
 
-    public int getCustomerId() {
-        return CustomerId;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setCustomerId(int customerId) {
-        CustomerId = customerId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public int getOrderNumber() {
-        return OrderNumber;
+    public int getTotal() {
+        return total;
     }
 
-    public void setOrderNumber(int orderNumber) {
-        OrderNumber = orderNumber;
+    public void setTotal(int total) {
+        this.total = total;
     }
-
 }

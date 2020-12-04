@@ -31,10 +31,10 @@
         <legend>Order information</legend>
         <label for="id">Id:</label><br>
         <input type="number" id="id" name="id" value="${requestScope["order"].getId()}" hidden><br>
-        <label for="customerId">Customer Id:</label><br>
-        <input type="text" id="customerId" name="customerId" value="${requestScope["order"].getCustomerId()}"><br>
-        <label for="orderNumber">Order number:</label><br>
-        <input type="text" id="orderNumber" name="orderNumber" value="${requestScope["order"].getOrderNumber()}"><br><br>
+        <label for="userId">User Id:</label><br>
+        <input type="text" id="userId" name="userId" value="${requestScope["order"].getUserId()}"><br>
+        <label for="total">Total:</label><br>
+        <input type="text" id="total" name="total" value="${requestScope["order"].getTotal()}"><br><br>
         <input type="submit" value="update order">
 
     </form>

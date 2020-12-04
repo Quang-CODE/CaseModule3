@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDetailsServices {
-    private static final String INSERT_ORDERDETAILS_SQL = "insert into orderdetails" + "(Id, OrderId, ProductId, orderNumber, price, Quantity, productDescription) VALUES" +
-            " (?, ?, ?, ?, ?, ?, ?);";
+    private static final String INSERT_ORDERDETAILS_SQL = "insert into orderdetails" + "(OrderId, ProductId, orderNumber, price, Quantity, productDescription) VALUES" +
+            " (?, ?, ?, ?, ?, ?);";
 
     private static final String SELECT_ORDERDETAILS_BY_ID = "select * from orderdetails where id = ?";
     private static final String SELECT_ALL_ORDERDETAILS = "select * from orderdetails";
@@ -48,13 +48,12 @@ public class OrderDetailsServices {
         try{
             Connection connection = ConnectMySQLDb.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_ORDERDETAILS_SQL);
-            preparedStatement.setInt(1,orderDetails1.getId());
-            preparedStatement.setInt(2,orderDetails1.getOrderId());
-            preparedStatement.setInt(3,orderDetails1.getProductId());
-            preparedStatement.setInt(4,orderDetails1.getOrderNumber());
-            preparedStatement.setInt(5,orderDetails1.getPrice());
-            preparedStatement.setInt(6,orderDetails1.getQuantity());
-            preparedStatement.setString(7,orderDetails1.getShipAddress());
+            preparedStatement.setInt(1,orderDetails1.getOrderId());
+            preparedStatement.setInt(2,orderDetails1.getProductId());
+            preparedStatement.setInt(3,orderDetails1.getOrderNumber());
+            preparedStatement.setInt(4,orderDetails1.getPrice());
+            preparedStatement.setInt(5,orderDetails1.getQuantity());
+            preparedStatement.setString(6,orderDetails1.getShipAddress());
             preparedStatement.executeUpdate();
         }catch (Exception e){
             e.printStackTrace();

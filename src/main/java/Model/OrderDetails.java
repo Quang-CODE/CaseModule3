@@ -9,6 +9,15 @@ public class OrderDetails {
     private int Quantity;
     private String shipAddress;
 
+    public OrderDetails(int orderId, int productId, int orderNumber, int price, int quantity, String shipAddress) {
+        OrderId = orderId;
+        ProductId = productId;
+        this.orderNumber = orderNumber;
+        this.price = price;
+        Quantity = quantity;
+        this.shipAddress = shipAddress;
+    }
+
     public int getId() {
         return Id;
     }

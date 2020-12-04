@@ -26,11 +26,11 @@
         <legend>Are you sure you want to delete</legend>
         <label for="id">Id:</label><br>
         <input type="number" id="id" name="id" value="${requestScope["order"].getId()}" hidden><br>
-        <label for="customerId">Customer Id:</label><br>
-        <input type="number" id="customerId" name="customerId" value="${requestScope["order"].getCustomerId()}"><br>
-        <label for="orderNumber">Order number:</label><br>
-        <input type="number" id="orderNumber" name="orderNumber" value="${requestScope["order"].getOrderNumber()}"><br><br>
-        <input type="submit" value="delete order">
+        <label for="userId">User id:</label><br>
+        <input type="text" id="userId" name="userId" value="${requestScope["order"].getUserId()}"><br>
+        <label for="total">Total:</label><br>
+        <input type="text" id="total" name="total" value="${requestScope["order"].getTotal()}"><br><br>
+        <input type="submit" value="update order">
 
     </form>
     </div>

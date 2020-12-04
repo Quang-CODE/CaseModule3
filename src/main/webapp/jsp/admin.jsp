@@ -18,6 +18,7 @@
 <div class="container" style="background-color: lavenderblush">
     <div id="form" style="height: 800px;align-content: center">
         <h1 style="text-align: center">WELCOME TO ADMIN PAGE</h1>
+
         <div class="container-fluid">
             <table class="table table-striped">
                 <thead class="thead-dark">

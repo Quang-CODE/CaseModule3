@@ -35,9 +35,9 @@ public class EditOrderServlet extends HttpServlet {
     }
     private void editOrder(HttpServletRequest request, HttpServletResponse response){
         int id = Integer.parseInt(request.getParameter("id"));
-        int customerId = Integer.parseInt(request.getParameter("customerId"));
-        int orderNumber = Integer.parseInt(request.getParameter("orderNumber"));
-        Order order = new Order(id,customerId,orderNumber);
+        int userId = Integer.parseInt(request.getParameter("userId"));
+        int total = Integer.parseInt(request.getParameter("total"));
+        Order order = new Order(id,userId,total);
         orderService.updateOrder(order);
         try {
             request.getRequestDispatcher("/order").forward(request,response);

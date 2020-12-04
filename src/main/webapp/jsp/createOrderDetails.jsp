@@ -16,7 +16,7 @@
 
 <html>
 <head>
-    <title>create new product</title>
+    <title>create new order details</title>
     <style>
         .message{
             color:green;
@@ -39,10 +39,10 @@
     <form action="/createOrderDetails" method="post">
         <legend>Create order details</legend>
         <table>
-            <tr>
-                <td>Id: </td>
-                <td><input type="number" name="id" id="id"></td>
-            </tr>
+<%--            <tr>--%>
+<%--                <td>Id: </td>--%>
+<%--                <td><input type="number" name="id" id="id"></td>--%>
+<%--            </tr>--%>
             <tr>
                 <td>Order id: </td>
                 <td><input type="number" name="orderId" id="orderId"></td>

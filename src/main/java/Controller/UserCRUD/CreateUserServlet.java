@@ -36,14 +36,14 @@ public class CreateUserServlet extends HttpServlet {
         }
     }
     private void createUser(HttpServletRequest request, HttpServletResponse response){
-        int id = Integer.parseInt(request.getParameter("id"));
+//        int id = Integer.parseInt(request.getParameter("id"));
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String address = request.getParameter("address");
         String email = request.getParameter("email");
         String shipAddress = request.getParameter("shipAddress");
         int role = Integer.parseInt(request.getParameter("role"));
-        User user = new User(id,firstName,lastName,address,email,shipAddress,role);
+        User user = new User(firstName,lastName,address,email,shipAddress,role);
         userServices.addUser(user);
         try {
             request.getRequestDispatcher("/users").forward(request,response);

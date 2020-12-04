@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
             request.getRequestDispatcher("/jsp/home.jsp").forward(request,response);
         }else if(user1.getRole() == 1){
             httpSession.setAttribute("admin",user1);
-            request.getRequestDispatcher("/jsp/admin.jsp").forward(request,response);
+            request.getRequestDispatcher("/admin").forward(request,response);
         }
     }
 

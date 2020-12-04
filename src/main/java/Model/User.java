@@ -19,6 +19,15 @@ public class User {
         Role = role;
     }
 
+    public User( String firstName, String lastName, String address, String email, String shipAddress, int role) {
+        FirstName = firstName;
+        LastName = lastName;
+        Address = address;
+        Email = email;
+        ShipAddress = shipAddress;
+        Role = role;
+    }
+
     public int getId() {
         return Id;
     }

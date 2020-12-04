@@ -21,6 +21,9 @@
         <h1 style="text-align: center">Order details list</h1>
         <form action="/createOrderDetails">
         <table class="table table-striped">
+            <tr>
+                <td><a href="/admin">Click here to go back to admin page</a></td>
+            </tr>
         <tr>
             <td><a href="/jsp/createOrderDetails.jsp">Create order details</a></td>
         </tr>

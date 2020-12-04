@@ -17,7 +17,7 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <title>create new product</title>
+    <title>create new order</title>
     <style>
         .message{
             color:green;
@@ -40,17 +40,17 @@
     <form action="/createOrder" method="post">
         <legend>Create order</legend>
         <table>
+<%--            <tr>--%>
+<%--                <td>Id: </td>--%>
+<%--                <td><input type="number" name="id" id="id"></td>--%>
+<%--            </tr>--%>
             <tr>
-                <td>Id: </td>
-                <td><input type="number" name="id" id="id"></td>
+                <td>User id </td>
+                <td><input type="number" name="userId" id="userId"></td>
             </tr>
             <tr>
-                <td>Customer id </td>
-                <td><input type="number" name="customerId" id="customerId"></td>
-            </tr>
-            <tr>
-                <td>Order number </td>
-                <td><input type="number" name="orderNumber" id="orderNumber"></td>
+                <td>Total </td>
+                <td><input type="number" name="total" id="total"></td>
             </tr>
                 <td></td>
                 <td><input type="submit" value="Create order"></td>
